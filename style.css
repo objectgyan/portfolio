@@ -47,8 +47,24 @@ header {
 }
 
 header .logo {
+  display: flex;
+  align-items: center;
   font-size: 1.5rem;
   font-weight: bold;
+  gap: 10px;
+}
+
+/* Logo image styling */
+.logo img {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.logo span {
+  display: inline-block;
+  color: var(--text-light);
 }
 
 header nav {
@@ -340,4 +356,13 @@ footer {
   text-align: center;
   padding: 20px;
   font-size: 0.8rem;
+}
+
+footer a {
+  color: var(--accent);
+  text-decoration: underline;
+}
+
+footer a:visited {
+  color: var(--accent);
 }
