@@ -366,3 +366,78 @@ footer a {
 footer a:visited {
   color: var(--accent);
 }
+
+/*
+  Responsive adjustments
+  To ensure the site looks great on tablets and mobile devices, media queries
+  override some desktop styles. Header and navigation stack vertically, hero
+  text sizes shrink, service cards expand to full width, and detail sections
+  switch to a column layout. These changes enhance usability on screens under
+  768px wide and further adjust font sizes and spacing for very small
+  screens under 480px.
+*/
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  header nav {
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  .hero {
+    padding: 80px 20px;
+  }
+  .hero h1 {
+    font-size: 2rem;
+  }
+  .hero p {
+    font-size: 1rem;
+  }
+  .services {
+    flex-direction: column;
+    align-items: center;
+  }
+  .service-card {
+    width: 100%;
+    max-width: 400px;
+  }
+  .detail .container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .detail .container img,
+  .detail .container div {
+    width: 100%;
+    max-width: none;
+  }
+  .contact form {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+    padding: 10px 20px;
+  }
+  .logo span {
+    font-size: 1rem;
+  }
+  header nav a {
+    font-size: 0.9rem;
+  }
+  .hero {
+    padding: 60px 10px;
+  }
+  .hero h1 {
+    font-size: 1.6rem;
+  }
+  .hero p {
+    font-size: 0.9rem;
+  }
+  .contact form {
+    padding: 15px;
+  }
+}
