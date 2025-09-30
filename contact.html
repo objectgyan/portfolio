@@ -27,10 +27,28 @@
 
   <section class="contact">
     <h2>Get in Touch</h2>
-    <form action="mailto:MAYANK@OBJECTGYAN.COM" method="POST" enctype="text/plain">
+    <!--
+      To deliver form submissions from this static site without server‑side code we leverage
+      the free FormSubmit service. According to the FormSubmit documentation, no
+      registration is required; simply point the form’s action to
+      https://formsubmit.co/your@email.com and include name attributes on each
+      field. The first submission will trigger a confirmation email and
+      subsequent submissions will be delivered directly to your inbox【220177003151160†L37-L69】.
+      We set the action to your business email (MAYANK@OBJECTGYAN.COM) and POST
+      the data. Hidden fields provide a custom subject line and disable the
+      default reCAPTCHA for a frictionless experience【220177003151160†L92-L141】.
+    -->
+    <form action="https://formsubmit.co/MAYANK@OBJECTGYAN.COM" method="POST">
       <input type="text" name="name" placeholder="Your Name" required>
       <input type="email" name="email" placeholder="Your Email" required>
       <textarea name="message" placeholder="Tell us about your project" required></textarea>
+      <!-- Hidden fields configure FormSubmit -->
+      <input type="hidden" name="_subject" value="New consultation request from Objectgyan site">
+      <!-- Disable FormSubmit reCAPTCHA; spam filtering is still applied【220177003151160†L130-L141】 -->
+      <input type="hidden" name="_captcha" value="false">
+      <!-- Optional: set a custom thank‑you page. Commented out to use default FormSubmit page.
+      <input type="hidden" name="_next" value="thanks.html">
+      -->
       <button type="submit">Send Message</button>
     </form>
     <p style="margin-top:20px;">Or email us directly at <a href="mailto:MAYANK@OBJECTGYAN.COM" style="color:#fff; text-decoration:underline;">MAYANK@OBJECTGYAN.COM</a></p>
